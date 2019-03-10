@@ -101,7 +101,7 @@ def main():
     #pass_user_data=True - разрешить работу с user_data
     
     # Добавим в тело нашего бота обработчик картинок
-    dp.add_handler(CommandHandler('cat', send_cat_picture))
+    dp.add_handler(CommandHandler('cat', send_cat_picture, pass_user_data=True))
 
     # Добавим хендлер RegexHandler
     dp.add_handler(RegexHandler('^(Прислать котика)$', send_cat_picture, pass_user_data=True))
